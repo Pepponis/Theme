@@ -1,0 +1,353 @@
+/**
+ * @name Theme by ElPepponel2
+ * @description ---
+ * @author ElPepponel
+ * @version 1
+ */
+
+ /*▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞*/
+@import url("https://gibbu.github.io/BetterDiscord-Themes/addons/windows-titlebar.css");     /* Αλλαγη close κουμπι κτλ */
+/*▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞▞*/
+ :root {
+  --members-hiding-width: 2.9%; /*Amount that will be shown when the server's members panel hides | Default 2.9%*/
+  --showing-width: 13.8%; /*Amount that will be shown when the panels show | Default 13.5%*/
+  --hidden-background: transparent; /*Background of the elements when hidden*/
+  --showing-background: transparent;/*Background of the elements when showing*/
+  --transition-speed: 0.40s; /*Changes the transition speed*/
+}
+
+
+
+:root {
+    
+  /* Colors */
+  --main-color: #419e85;
+
+  /* Borders */
+  --avatar-radius: 5px;
+}
+
+/* Dark/Light vars */
+.theme-dark {
+
+  /* BGs */
+  --background-primary: #2d3450;
+  --background-secondary: #242b44;
+  --background-secondary-alt: #172038;
+  --background-secondary-alt-alt: #1b1d31;
+  --background-tertiary: #060c24;
+  --deprecated-store-bg: var(--background-primary);
+  --background-floating: var(--background-secondary);
+  --colortransparency: #0003;
+  /* Cards */
+  --card: #212332;
+  /* Other stuff */
+  --textcolor: #fff;
+  --epicshadow1: #fff3;
+  --background-mentioned: rgb(100, 7, 88);
+  --SC-spotify-green: rgb(201, 0, 0);
+}
+
+
+/*Hides server members list*/
+.container-2wlB3z {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  width: var(--members-hiding-width);
+  min-width: unset;
+  justify-content: unset;
+  transition: width var(--transition-speed) ease-in;
+  will-change: width;
+}
+.bd-minimal .container-2wlB3z { /*Minimal mode server members hiding*/
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  width: var(--members-hiding-width);
+  min-width: unset;
+  justify-content: unset;
+  transition: width var(--transition-speed) ease-in;
+  will-change: width;
+}
+.membersGroup-v9BXpm { /*Hides the member's role*/
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  color: transparent;
+  transition: color var(--transition-speed) ease-in;
+  will-change: color;
+}
+.member-3-YXUe { /*Moves server members a bit to the left and separates them for aesthetic purposes*/
+  margin-left: 2px;
+  margin-bottom: 3px;
+}
+
+/*Shows the server members list*/
+.container-2wlB3z:hover { /*Shows server's members*/
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  width: var(--showing-width);
+  will-change: width;
+}
+.bd-minimal .container-2wlB3z:hover { /*Minimal mode server members showing*/
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  width: calc(var(--showing-width) - 1.9%);
+  will-change: width;
+}
+.container-2wlB3z:hover .membersGroup-v9BXpm{ /*Shows members roles when hovering*/
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  color: white;
+  will-change: color;
+}
+
+            /* Κινούμενα κανάλια settings ( https://drive.google.com/file/d/1R52o4NHBGotSAcZhirgs55M7KMeeTLoU/view ) */
+  .mainContent-u_9PKf:hover {
+    animation: UserModalButtons 0.8s normal ease;}
+  .mainContent-u_9PKf .noWrap-3jynv6 {width: 100px;opacity: 1;}
+  .mainContent-u_9PKf {transition: 0.6s;}
+  .mainContent-u_9PKf:hover {transition: 0.6;}
+  @keyframes UserModalButtons {
+    0% {
+      transform: translateY(0px);
+    }
+    45% {
+      transform: translateY(-5px);
+    }
+    90% {
+      transform: translateY(0px);
+    }
+  }
+  /*                   | END/END/END/END |                   */
+/*||▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚||*/
+
+  .role-2irmRk{   /*  Role Κυκλος (πανω στο προφιλ) | ( https://i.postimg.cc/zvC2KyPh/image.png ) */
+    background: transparent;
+    border: 1px solid;
+    border-radius: 11px;
+  }
+  .roleCircle-3xAZ1j {
+    margin-left: 0;
+  }
+  .addButton-pcyyf6.role-2irmRk {
+      border-color: #4f545c;
+  }
+  .addButtonIcon-1NMJ8u {
+      width: 10px;
+      height: 10px;
+  }
+  /*                   | END/END/END/END |                   */
+/*||▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚||*/
+:root {    /* Discord Message box (ακτινα γυρο απο το chat) | ( https://i.postimg.cc/9MTLH42k/image.png ) */
+  --color-brand-lighter: #700000;
+}
+.input-cIJ7To,
+.scrollableContainer-2NUZem {
+  background-color: #1a1818;
+  transition: background-color 0.2s ease, border-color 0.5s ease;
+  border: 2px solid transparent;
+  outline: none;
+}
+.input-cIJ7To:hover,
+.scrollableContainer-2NUZem:hover {
+  border-color: #ffffff;
+  background-color: #000000;
+}
+.input-cIJ7To:focus-within,
+.scrollableContainer-2NUZem:focus-within {
+  background-color: #2e2c2c;
+  border-color: var(--color-brand-lighter);
+}
+.scrollableContainer-2NUZem {
+  border: 3px solid transparent;
+  border-radius: 25px;
+}
+/*                   | END/END/END/END |                   */
+/*||▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚▚||*/
+/* διπλα απο τις ειδοποιησεις του server κανει animation */
+                                            /* ( https://i.postimg.cc/DfPcQ3w1/image.png ) */
+.numberBadge-2s8kKX {
+animation: animatedPing 1.3s infinite ease-in-out;
+}
+@keyframes animatedPing {
+0% {
+  transform: rotate(-12deg);
+}
+50% {
+  transform: rotate(12deg) scale(1.2);
+}
+100% {
+  transform: rotate(-10deg);
+}
+}
+/*                   | END/END/END/END |                   */
+
+/*   remove block message   */
+.groupStart-23k01U:not(.cozyMessage-3V1Y8y):not(.backgroundFlash-24qWLN) {display: none}
+/*                   | END/END/END/END |                   */
+ /* | Discord Icon GIF | */
+                                                  /* ( https://i.postimg.cc/mkLCphgC/image.png ) */
+                                                  :root {
+                                                    --darkplus-bg2: #465286;
+                                                    --darkplus-home-icon: url(https://i.postimg.cc/ydpNx5mL/Rotating-earth-large.gif)
+                                                  }
+                                                  .homeIcon-AaowEC path {fill: transparent}
+                                                  .homeIcon-AaowEC {
+                                                  background: var(--darkplus-home-icon) center/cover no-repeat;
+                                                  min-width: 52px;
+                                                  min-height: 52px;
+                                                  }
+                                                /*                   | END/END/END/END |                   */
+                                                
+                                                  /* | Στρογγυλοποιηση μηνυματος | */
+                                                  .cozyMessage-3V1Y8y .contents-2mQqc9 > .markup-2BOw-j:not(:empty) {
+                                                    background-color: #23283e;
+                                                    display: inline-block;
+                                                    max-width:1500px;
+                                                    width: -webkit-fit-content;
+                                                    width: -moz-fit-content;
+                                                    width: fit-content;
+                                                    margin: 0;
+                                                    padding: 15px;
+                                                    border-radius: 15px;
+                                                  }
+                                                /*                   | END/END/END/END |                   */
+                                                
+                                                /* | Προφιλ Shadow και γυρο γυρο | */
+                                                  .avatar-1BDn8e.clickable-1bVtEA {
+                                                    filter: drop-shadow(0 0 8px);
+                                                    color: var(rgb(0, 255, 255));
+                                                  }
+                                                  .avatar-1BDn8e:hover.clickable-1bVtEA:hover {
+                                                    filter: drop-shadow(0 0 10px);
+                                                    color: var(rgb(0, 217, 255));
+                                                    transform: scale(2.2) rotate(0deg);
+                                                    transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+                                                  }
+                                                /*                   | END/END/END/END |                   */
+ /* Fly in Voice Chat buttons */
+ .container-3baos1 .noWrap-3jynv6 {
+  width: 0px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .6s ease-in-out;
+}
+.container-3baos1:hover .noWrap-3jynv6 {
+  width: 100px;
+  opacity: 1;
+  pointer-events: all;
+}
+/*                   | END/END/END/END |                   */
+  /* Color channels */
+  :root {
+    /* ---- connected -- */
+    --indicator-connected: 87, 242, 135;
+    --indicator-connected-border: rgba(var(--indicator-connected));
+    --indicator-connected-background: rgba(var(--indicator-connected), 0.1);
+    --indicator-connected-hover: rgba(var(--indicator-connected), 0.18);
+  }
+  /*                   | END/END/END/END |                   */
+  /* the "discord" watermark */
+  .titleBar-AC4pGV .wordmark-2iDDfm {
+    order : 3;
+    position: static;
+    margin: auto;
+    padding: 0px 9px 5px;
+  }
+  .item-3HknzM[aria-controls="blocked-tab"] {
+  display: none;
+  }
+  /* νουμερο στης ειδοποιησεις */
+  .numberBadge-2s8kKX{
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(0, 238, 255) !important;
+  }
+  /* Changes the ring color when someone is speaking */
+  /* Servers */
+  .avatarSpeaking-2IGMRN {
+    box-shadow: inset 0 0 0 2px rgb(146, 0, 146),inset 0 0 0 3px var(--background-secondary);
+  }
+  /* DMs */
+  .border-Jn5IOt.speaking-B2MXPi {
+    box-shadow: inset 0 0 0 2px rgb(146, 0, 146),inset 0 0 0 3px var(--background-floating);
+  }
+  /* Buttons ιντεο και οθονη */
+  .button-1YfofB.buttonColor-7qQbGO, .button-1YfofB .buttonColor-7qQbGO{
+    background-color:black;
+  }
+  
+  /*     */
+  
+  [mask="url(#svg-mask-status-online)"] div{
+      background-color: rgb(11, 136, 0) !important;
+  }
+  [mask="url(#svg-mask-status-idle)"] div{
+      background-color: rgb(229, 255, 0) !important;
+  }
+  [mask="url(#svg-mask-status-dnd)"] div{
+      background-color: rgb(136, 0, 0) !important;
+  }
+  [mask="url(#svg-mask-status-offline)"] div{
+      background-color: rgb(73, 73, 73) !important;
+  }
+  
+  .container-3baos1 .button-14-BFJ,
+   .container-3baos1 .title-eS5yk3,
+   .container-3baos1 .subtext-3CDbHg{ 
+      color:red;
+      animation: rainbow 5s linear infinite;
+  }
+  @keyframes rainbow {
+      0%   {color: red;}
+      16%  {color: orange;}
+      33%  {color: yellow;}
+      50%  {color: lime;}
+      58%  {color: cyan;}
+      66%  {color: blue;}
+      83%  {color: magenta;}
+      100% {color: red;}
+  }
+
+
+.modeSelected-346R90 .content-1x5b-n, .modeSelected-346R90:hover .content-1x5b-n {
+  border-left: 10px solid rgb(141, 0, 0);
+  border-radius: 5px;
+  height: 35px;
+  transition: 5s;
+}
+
